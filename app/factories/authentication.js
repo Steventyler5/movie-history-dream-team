@@ -2,7 +2,7 @@
 
 app.factory("authenticate", function($q, $http) {
 
-	let firebaseRef = new Firebase('https://dreamteam-music-hist.firebaseio.com/');
+	let firebaseRef = new Firebase('https://new-dream-team.firebaseio.com/');
 
 	let Authenticate = {};
 
@@ -27,7 +27,7 @@ app.factory("authenticate", function($q, $http) {
 			  } else {
 			  	console.log(user);
 			    console.log("Successfully created user account with uid:", userData.uid);
-			    $http.post('https://dreamteam-music-hist.firebaseio.com/users.json', {user});
+			    $http.post('https://new-dream-team.firebaseio.com/users.json', {user});
 			    return resolve(userData);
 			  }
 			});

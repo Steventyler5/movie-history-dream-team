@@ -1,0 +1,32 @@
+<!-- <div ng-include="'partials/nav.html'"></div> -->
+
+
+<div class="container" style="margin-top: 20px;">
+	<div class="row">	
+
+    <div ng-repeat="usermovie in userMovieArray" class="col l4">
+    	<div class="card hoverable">
+    	  <a class="waves-effect waves-teal btn-flat right" ng-click="deleteMovie(usermovie.id)" id="{{ usermovie.id }}">Delete</a>
+				<div class="card-image">	
+     			<img src="{{ usermovie.poster }}">
+     		</div>
+     		<div class="card-action">
+          <a ng-click="update(usermovie.id)">Add to Watched</a>
+        </div>	
+			</div>
+    </div>
+
+		<div ng-repeat="movie in rawMovieArray" class="col l4">
+    	<div class="card hoverable">
+				<div class="card-image">	
+     			<img src="{{ movie.Poster }}">
+     		</div>
+     		<div class="card-action">
+          <a ng-click="addMovie(movie.imdbID)" id="{{ movie.imdbID }}">Add to Watchlist</a>
+        </div>	
+			</div>
+		</div>
+
+
+	</div>
+</div>
