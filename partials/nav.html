@@ -1,32 +1,36 @@
-<nav>
-  <div class="nav-wrapper">
-  <label for="search"><i class="large material-icons">search</i></label>
-   <input id="search" type="text" style="width: 400px" placeholder="Search movies">
-   <a class="waves-effect waves-light btn">Search</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="#/login">Login</a></li>
-      <li><a href="#/logout">Logout</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- <nav class="navbar navbar-default">
-  	<div class="container-fluid">
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		 	<ul class="nav navbar-nav">
-		    	<li><a href="#/find-new-movies">Find New Movies</a></li>
-		    	<li><a href="#/your-movies">Search Your Movies</a></li>
-		    </ul>
-		    <ul class="nav navbar-nav navbar-right">
-		   		<li>
-	      			<a href="#/welcome" ng-click="logout()">
-	        			<span ng-if="isAuthenticated()">Logout</span>
-	      			</a>
-	      			<a href="#/login">
-	        			<span ng-if="!isAuthenticated()">Login / Register</span>
-	      			</a>
-	    		</li>
-	    	</ul>
-	    </div>
- 	</div>
-</nav> -->
+<!-- <div class="nav-container"> -->
+	<nav class="navbar navbar-default">
+	  <div class="navbar-fixed">
+		    <div class="top-nav nav-wrapper">
+		      <form>
+		        <div class="left input-field">
+		          <input type="search" ng-submit="search()" placeholder="Search for a movie..." ng-model="movieToSearch" id="search" required>
+		          <label for="search"><i class="material-icons">search</i></label>
+		          <i class="material-icons">close</i>
+		        </div>
+		      </form>
+			    <ul class="right">
+			   		<li>
+		      			<a href="#/login">
+		        			<span ngShow="!isAuthenticated()">Login / Register</span>
+		      			</a>
+		      			<a href="#/welcome" ng-click="logout()">
+		        			<span ngHide="isAuthenticated()">Logout</span>
+		      			</a>
+		    		</li>
+		    	</ul>
+		    </div>
+		    <div class="path">
+		    <h3 class="header-path">Show the current filter / "file path"</h3>
+				</div>
+	      <div class="filter-menu">
+	        <ul class="left">
+	          <li class="active"><a href="#/show-untracked">Show Untracked</a></li>
+	          <li><a href="#/show-unwatched">Show Unwatched</a></li>
+	          <li><a href="#/show-watched">Show Watched</a></li>
+	          <li><a href="#/favorites">Favorites</a></li>
+	        </ul>
+	      </div>
+	  </div>
+	</nav>
+<!-- </div> -->

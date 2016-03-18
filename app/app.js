@@ -21,6 +21,10 @@ app.config(['$routeProvider',
 	      		templateUrl: 'partials/search-your-movies.html',
 	        	controller: 'UserMoviesCtrl'
 	      	}).
+	      	when('/logout', {
+				  template: '', //A template or templateUrl is required by AngularJS, even if your controller always redirects.
+				  controller: 'LogoutCtrl'
+					}).
         	otherwise({
         		redirectTo: '/welcome'
       		});
