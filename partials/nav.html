@@ -1,32 +1,11 @@
 <nav>
-  <div class="nav-wrapper">
+  <div>
   <label for="search"><i class="large material-icons">search</i></label>
-   <input id="search" type="text" style="width: 400px" placeholder="Search movies">
-   <a class="waves-effect waves-light btn">Search</a>
+   <input id="search" type="text" style="width: 400px" placeholder="Search movies" ng-model="movieToSearch">
+   <a class="waves-effect waves-light btn" href="#/all-results">Search</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><a href="#/login">Login</a></li>
       <li><a href="#/logout">Logout</a></li>
     </ul>
   </div>
 </nav>
-
-<!-- <nav class="navbar navbar-default">
-  	<div class="container-fluid">
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		 	<ul class="nav navbar-nav">
-		    	<li><a href="#/find-new-movies">Find New Movies</a></li>
-		    	<li><a href="#/your-movies">Search Your Movies</a></li>
-		    </ul>
-		    <ul class="nav navbar-nav navbar-right">
-		   		<li>
-	      			<a href="#/welcome" ng-click="logout()">
-	        			<span ng-if="isAuthenticated()">Logout</span>
-	      			</a>
-	      			<a href="#/login">
-	        			<span ng-if="!isAuthenticated()">Login / Register</span>
-	      			</a>
-	    		</li>
-	    	</ul>
-	    </div>
- 	</div>
-</nav> -->

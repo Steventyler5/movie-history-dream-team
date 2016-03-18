@@ -1,0 +1,14 @@
+<div class="container" style="margin-top: 20px;">
+	<div class="row">	
+        <div ng-repeat="usermovie in rawMovieArray" class="col l4">
+        	<div class="card hoverable">
+    			<div class="card-image">	
+         		     <img src="{{ usermovie.Poster }}">
+         		</div>
+         		<div class="card-action">
+                    <a ng-click="addMovie(usermovie.imdbID)" id="{{ usermovie.imdbID }}">Add to Watchlist</a>
+                </div>
+    		</div>
+        </div>
+    </div>
+</div>
