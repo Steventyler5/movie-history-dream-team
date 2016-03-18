@@ -27,6 +27,19 @@
    
 </head>
 <body ng-app="MovieHistory">
+	<!-- <nav ng-include="'partials/nav.html'"></nav> -->
+<nav ng-controller="FinderCtrl">
+  <div>
+  <label for="search"><i class="large material-icons">search</i></label>
+   <input id="search" type="text" style="width: 400px" placeholder="Search movies" ng-model="movieToSearch">
+   <a class="waves-effect waves-light btn" href="#/all-results" ng-click="search()">Search</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="#/login">Login</a></li>
+      <li><a href="#/logout">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
 	<div ng-view></div>
 
 	<script src="lib/bower_components/angular/angular.min.js"></script>
