@@ -1,3 +1,39 @@
+.navbar-default {
+	background-color: firebrick;
+}
+
+.navbar-fixed {
+	margin: 0px;
+}
+
+.header-path {
+	margin: 0px;
+}
+
 .align-right {
 	text-align: right;
+}
+
+.navbar {
+	display: inline-block;
+	margin: 0px;
+}
+
+.path {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 100%;
+	color: darkred;
+	margin: 0px;
+}
+
+.filter-menu {
+	display: inline-block;
+	box-sizing: border-box;
+	background-color: lightgrey;
+	margin: 0px;
+}
+
+.input-field {
+	width: 50%;
 }
